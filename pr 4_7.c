@@ -1,19 +1,23 @@
- #include<stdio.h>
+#include <stdio.h>
 
-main()
-{
-	int i,j,k=4,l=4;
-	for (i=1 ;i<=4 ; i++){
-			for(j=1 ; j<=7 ; j++){
-				if(j==k || j==l){
-					printf("* ");
-				}else{
-					printf("  ");
-				}
-		}
-		l--;
-		k++;
-		printf("\n");
-		}
-	}
- 
+int main() {
+    
+ int i, j, s;
+
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 5 * 2 - 1; j++) {
+            if (j >= 5 - i + 1 && j <= 5 + i - 1) {
+                if (j == 5 - i + 1 || j == 5 + i - 1) {
+                    printf("*");
+                } else {
+                    printf(" ");
+                }
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    
+}
